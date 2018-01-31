@@ -8,10 +8,14 @@
 
   <ion-navbar>
     <ion-title>{{ note.title }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onTrash()">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
-
 
 <ion-content padding>
 
@@ -23,7 +27,7 @@
 
     <ion-item>
       <ion-label fixed>Date</ion-label>
-      <ion-input type="text"[(ngModel)]="note.date"></ion-input>
+      <ion-input type="text" [(ngModel)]="note.date"></ion-input>
     </ion-item>
 
     <ion-item>
